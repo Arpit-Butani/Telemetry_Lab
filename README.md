@@ -17,3 +17,7 @@
 <p align="left"> <img width="349" height="728" alt="Screenshot 2025-09-29 165307" src="https://github.com/user-attachments/assets/e7d00c3a-0641-4836-8f92-2d263446ade7" /> <br/> <img width="379" height="760" alt="Screenshot 2025-09-29 165322" src="https://github.com/user-attachments/assets/7ae560d5-7232-4c17-8100-0a85c4cdea53" /> <br/> <img width="376" height="762" alt="Screenshot 2025-09-29 165345" src="https://github.com/user-attachments/assets/1f33729f-b1bb-4370-a1a0-e54311f7c56c" /> </p>
 
 
+**Video**
+
+https://github.com/user-attachments/assets/6307988c-e347-48b4-b579-9156274ea9f8
+
