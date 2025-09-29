@@ -1,3 +1,6 @@
+<h1>Telemetry Lab: README</h1>
+
+
 **#Threading & Backpressure Approach**
 * Telemetry computation runs within a dedicated coroutine scope on a Dispatchers.Default thread pool for high efficiency and concurrency. The foreground service uses an atomic flag to manage workload state and leverages Kotlin coroutines for structured concurrency and automatic cancellation. Backpressure is handled by posting telemetry metrics at interval after frames are processed, so UI observers only receive the latest computed stats through a SharedFlow that naturally buffers and drops outdated emissions if collector(s) lag.
 * Real-time frame metrics are collected and delivered via a SharedFlow with replay size one, preventing outdated backlog and avoiding memory leaks while ensuring immediate delivery to UI.
@@ -11,9 +14,6 @@
 * For telemetry/jank measurement where users expect immediate feedback, FGS offers reliability and explicit control that aligns with Android’s best practices for high-priority, long-running foreground work.
 
 **#JankStats Output (Sample @load=2)**
+<p align="left"> <img width="349" height="728" alt="Screenshot 2025-09-29 165307" src="https://github.com/user-attachments/assets/e7d00c3a-0641-4836-8f92-2d263446ade7" /> <br/> <img width="379" height="760" alt="Screenshot 2025-09-29 165322" src="https://github.com/user-attachments/assets/7ae560d5-7232-4c17-8100-0a85c4cdea53" /> <br/> <img width="376" height="762" alt="Screenshot 2025-09-29 165345" src="https://github.com/user-attachments/assets/1f33729f-b1bb-4370-a1a0-e54311f7c56c" /> </p>
 
-<img src="C:\Users\asus\Pictures\Screenshots\Screenshot 2025-09-29 165307.png"/>
-These values can be viewed in logcat or the app UI as live-updating telemetry (simulate by setting slider to 2 and running service for 30s).
-
-This design prioritizes high-precision, low-latency telemetry for UX and developer diagnostics, adhering to Android's most reliable service patterns for real-time, long-running tasks.
 
